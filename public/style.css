@@ -20,9 +20,24 @@
 	background-color: black;
 }
 .trans-white{
-	font-size: 1.4em;
 	background-color: rgba(0,0,0,.75);
 	border-radius: 1vw
+}
+@media(max-width:650px){
+	.home-bold{
+		font-size: 1.5em;
+	}
+	.home-less-bold{
+		font-size: 1em;
+	}
+}
+@media(min-width:650px){
+	.home-bold{
+		font-size: 4vh;
+	}
+	.home-less-bold{
+		font-size: 2.5vh;
+	}
 }
 .navbar-fixed{
 	position: absolute;
@@ -40,4 +55,7 @@ a.navbar-brand{
 	font-size: 60px;
 	font-family: Poller One;
 	color: #EDAC3F;
+}
+li input{
+	color: white;
 }
