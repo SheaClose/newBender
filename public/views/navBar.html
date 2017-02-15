@@ -1,23 +1,35 @@
-<div class="navbar-fixed">
-	<nav>
+<div ng-keydown="$event.which === 27 && menuClick(false)" class="navbar-fixed">
+	<nav >
     <div class="nav-wrapper">
       <a class="navbar-brand" ui-sref="home">Bender</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse right">&#9776;</a>
+      <a
+				ng-click="menuClick()"
+			 	class="button-collapse right">&#9776;
+			</a>
       <ul class="right hide-on-med-and-down">
-				<li><input type="text" class="white-text" placeholder="Browse by Zipcode"></li>
+				<li><input ng-keydown="$event.which === 13 && keyDown(zipcode)" type="text" class="white-text" placeholder="Browse by Zipcode" ng-model="zipcode" ></li>
 				<li><a ui-sref="mapView">Browse By Area</a></li>
         <li><a ui-sref="browseBeers">Browse Beers</a></li>
 				<li><a ui-sref="browseBeerStyles">Browse By Style</a></li>
       </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a ui-sref="">Browse By Area</a></li>
-        <li><a ui-sref="">Browse Beers</a></li>
-      </ul>
+
+      <!-- <ul class="side-nav" id="mobile-demo">
+        <li><a ui-sref="mapView">Browse By Area</a></li>
+        <li><a ui-sref="browseBeers">Browse Beers</a></li>
+				<li><a ui-sref="browseBeerStyles">Browse By Style</a></li>
+				<li><a ui-sref="browseBeerStyles">test</a></li>
+      </ul> -->
+
     </div>
+		<div ng-show="click" class="col s12 m12 hide-on-large-only right ">
+			<div class="black-text menu-selections">
+				<ul class="menu-box">
+					<li class="home-less-bold"><a id="black-text" ui-sref="mapView">Browse By Area</a></li><br>
+					<li class="home-less-bold"><a id="black-text" ui-sref="browseBeers">Browse Beers</a></li><br>
+					<li class="home-less-bold"><a id="black-text" ui-sref="browseBeerStyles">Browse By Style</a></li><br>
+					<li class="home-less-bold input-field" id="black-text"><input ng-keydown="$event.which === 13 && keyDown(zipcode)" type="text" class="black-text input-field" placeholder="Browse by Zipcode" ng-model="zipcode" id="menu-search"></li>
+				</ul>
+			</div>
+		</div>
   </nav>
 </div>
-<script>
-$( document ).ready(function(){
-	$(".button-collapse").sideNav();
-})
-</script>

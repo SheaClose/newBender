@@ -11,6 +11,7 @@
   "dependencies": {
     "angular-google-maps": "^2.4.1",
     "body-parser": "^1.16.1",
+    "bootstrap": "^3.3.7",
     "brewerydb-node": "0.0.1",
     "cors": "^2.8.1",
     "express": "^4.14.1",
