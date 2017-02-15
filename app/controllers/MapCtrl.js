@@ -10,7 +10,7 @@ angular.module("app")
 	if(!$state.params.lat && !$state.params.lng){
 		(function(){
 			mapFactory.searchByLocation().then(response=>{
-				$scope.map = {
+				$scope.map ={
 						center: {
 								latitude: response.lat
 							, longitude: response.lng

@@ -36,23 +36,25 @@ angular.module("app", ['ui.router', 'uiGmapgoogle-maps'])
   })
 })
 .directive("navBar", function () {
-
 	return {
-			// template: `<div class="links">
-			// 	<a ui-sref="home">Home</a> <a ui-sref="mapView">Map</a> <a ui-sref="browseBeers">Beer</a> <a ui-sref="browseBreweries">Breweries</a> <a ui-sref="browseBeerStyles">Styles</a>
-			//
-			// </div>`
 				templateUrl: "./public/views/navBar.html"
-			, controller: function($scope, $state, mapFactory) {
+			, controller: function($scope, $state, mapFactory, beerFactory) {
+				/*boolean value to determine if the hamburger menu is selected*/
 				$scope.click = false
+				/*this function is run when "browse by area"to determine if the
+				browser is on the mapview. if it is, it reassigns the $scope.map
+				to the current geoLocation, regardless of state params*/
+				$scope.whereAmI = function(){
+					if ($state.current.name === "mapView") {
+						mapFactory.searchByLocation().then(response=>{
+							$scope.map.center.latitude = response.lat
+							$scope.map.center.longitude = response.lng
+						})
+					}
+				}
+				/**/
 				$scope.menuClick = function(bool){
-					if (bool === false) {
-						$scope.click = false
-					}
-					else {
-						$scope.click = !$scope.click
-
-					}
+					(bool !== false) ?  $scope.click = !$scope.click : $scope.click = false
 				}
 				$scope.keyDown = function(e) {
 					var numberBoolean = Number(e)

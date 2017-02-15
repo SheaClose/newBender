@@ -1,5 +1,5 @@
-<div ng-keydown="$event.which === 27 && menuClick(false)" class="navbar-fixed">
-	<nav >
+<div  class="navbar-fixed">
+	<nav ng-keydown="$event.which === 27 && menuClick(false)">
     <div class="nav-wrapper">
       <a class="navbar-brand" ui-sref="home">Bender</a>
       <a
@@ -8,23 +8,16 @@
 			</a>
       <ul class="right hide-on-med-and-down">
 				<li><input ng-keydown="$event.which === 13 && keyDown(zipcode)" type="text" class="white-text" placeholder="Browse by Zipcode" ng-model="zipcode" ></li>
-				<li><a ui-sref="mapView">Browse By Area</a></li>
+				<li><a ui-sref="mapView" ng-click="whereAmI()">Browse By Area</a></li>
         <li><a ui-sref="browseBeers">Browse Beers</a></li>
 				<li><a ui-sref="browseBeerStyles">Browse By Style</a></li>
       </ul>
-
-      <!-- <ul class="side-nav" id="mobile-demo">
-        <li><a ui-sref="mapView">Browse By Area</a></li>
-        <li><a ui-sref="browseBeers">Browse Beers</a></li>
-				<li><a ui-sref="browseBeerStyles">Browse By Style</a></li>
-				<li><a ui-sref="browseBeerStyles">test</a></li>
-      </ul> -->
 
     </div>
 		<div ng-show="click" class="col s12 m12 hide-on-large-only right ">
 			<div class="black-text menu-selections">
 				<ul class="menu-box">
-					<li class="home-less-bold"><a id="black-text" ui-sref="mapView">Browse By Area</a></li><br>
+					<li class="home-less-bold"><a id="black-text" ui-sref="mapView" ng-click="whereAmI()">Browse By Area</a></li><br>
 					<li class="home-less-bold"><a id="black-text" ui-sref="browseBeers">Browse Beers</a></li><br>
 					<li class="home-less-bold"><a id="black-text" ui-sref="browseBeerStyles">Browse By Style</a></li><br>
 					<li class="home-less-bold input-field" id="black-text"><input ng-keydown="$event.which === 13 && keyDown(zipcode)" type="text" class="black-text input-field" placeholder="Browse by Zipcode" ng-model="zipcode" id="menu-search"></li>
