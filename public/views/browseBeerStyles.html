@@ -1,1 +1,67 @@
 <nav-bar></nav-bar>
+
+<div class="container">
+	<!-- Categories -->
+	<div class="row">
+		<div class="col s6 m4 l3" ng-repeat="category in beerStyleCats">
+			<div class="card blue-grey darken-1">
+				<div ng-click="getStyle(category)" class="card-content white-text card-cont">
+					<ul>
+						<li>{{category}}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Styles By category -->
+	<div class="row">
+		<div class="col s4 m4 l4 left">
+			<i class="material-icons beer-styles-icons">skip_previous</i>
+		</div>
+		<div class="col s4 m4 l4 center">
+			 <i class="material-icons beer-styles-icons">repeat</i>
+		</div>
+		<div class="col s4 m4 l4 right right-align">
+			<i class="material-icons beer-styles-icons">skip_next</i>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s6 m4 l3" ng-repeat="category in selectedCategory">
+			<div class="card blue-grey darken-1">
+				<div ng-click="getSpecificStyle(category)" class="card-content white-text card-cont">
+					<ul>
+						<li>{{category.shortName}}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SpecificStyle -->
+	<div class="row">
+		<div class="col s4 m4 l4 left">
+			<i class="material-icons beer-styles-icons">skip_previous</i>
+		</div>
+		<div class="col s4 m4 l4 center">
+			 <i class="material-icons beer-styles-icons">repeat</i>
+		</div>
+		<div class="col s4 m4 l4 right right-align">
+			<i class="material-icons beer-styles-icons">skip_next</i>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s12 m12 l12">
+			<div class="card blue-grey darken-1">
+				<div class="card-content white-text">
+					<ul>
+						<li><h3>{{specificStyle.shortName}}</h3></li>
+						<li ng-show="specificStyle.abvMin"><strong><p>ABV Range:</p></strong> {{specificStyle.abvMin}}-{{specificStyle.abvMax}}</li>
+						<li ng-show="specificStyle.ibuMin"><strong><p>IBU Range:</p></strong> {{specificStyle.ibuMin}}-{{specificStyle.ibuMax}}</li>
+						<li ng-show="specificStyle.srmMin"><strong><p>SRM Range:</p></strong> {{specificStyle.srmMin}}-{{specificStyle.srmMax}}</li>
+						<li ng-show="specificStyle.fgMin"><strong><p>Final Gravity Range:</p></strong> {{specificStyle.fgMin}}-{{specificStyle.fgMax}}</li>
+						<li><strong><h5>Description:</h5></strong> {{specificStyle.description}}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

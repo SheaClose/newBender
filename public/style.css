@@ -40,9 +40,9 @@
 				font-size: 2.5vh;
 			}
 		}
-		.navbar-fixed{
+		/*.navbar-fixed{
 			position: absolute;
-		}
+		}*/
 		.nav-wrapper{
 			background-color: rgb(34,34,34);
 		}
@@ -115,4 +115,12 @@ a.button-collapse{
 			height: 70vh;
 			width: 99vw;
 		}
+}
+/*end of MapView*/
+/*beer-styles*/
+.card-cont{
+	height: 15vh;
+}
+.beer-styles-icons{
+	font-size: 3em;
 }

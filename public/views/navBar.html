@@ -17,7 +17,7 @@
 		<div ng-show="click" class="col s12 m12 hide-on-large-only right ">
 			<div class="black-text menu-selections">
 				<ul class="menu-box">
-					<div class="home-less-bold"><a id="black-text" ui-sref="mapView" ng-click="whereAmI()">Browse By Area</a></div>
+					<div ng-click="click=!click" class="home-less-bold"><a id="black-text" ui-sref="mapView" ng-click="whereAmI()">Browse By Area</a></div>
 					<div class="home-less-bold"><a id="black-text" ui-sref="browseBeers">Browse Beers</a></div>
 					<div class="home-less-bold"><a id="black-text" ui-sref="browseBeerStyles">Browse By Style</a></div>
 					<div class="home-less-bold input-field" id="black-text"><input ng-keydown="$event.which === 13 && keyDown(zipcode)" type="text" class="black-text input-field" placeholder="Browse by Zipcode" ng-model="zipcode" id="menu-search"></div>
