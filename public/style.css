@@ -8,14 +8,15 @@
 			background-color: transparent;
 		}
 		body{
+			height: 90vh
+		}
+		.home{
 			background: url("./EOZpjI3oSqKPNnF2S4Tp_Untitled0.jpg") no-repeat fixed;
 			left: 1vw;
+			height: 91vh;
 			background-position: 50% 50%;
 			background-size: cover;
 			background-color: black;
-		}
-		.home{
-			margin-top: 10vh;
 		}
 		.trans-white{
 			background-color: rgba(0,0,0,.75);
