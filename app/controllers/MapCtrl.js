@@ -1,5 +1,5 @@
 angular.module("app")
-.controller("mapCtrl", function($scope, $state, mapFactory){
+.controller("mapCtrl", function($scope, $state, mapFactory, uiGmapGoogleMapApi){
 	$scope.map = {
 			center: {
 					latitude: $state.params.lat
@@ -20,4 +20,7 @@ angular.module("app")
 			})
 		})()
 	}
+	uiGmapGoogleMapApi.then(function(maps) {
+
+	});
 })
