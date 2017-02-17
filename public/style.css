@@ -7,18 +7,15 @@
 			position: absolute;
 			background-color: transparent;
 		}
-		.home{
-			width: 100vw;
-			height: 100vh;
-			background-image: url("./EOZpjI3oSqKPNnF2S4Tp_Untitled0.jpg");
+		body{
+			background: url("./EOZpjI3oSqKPNnF2S4Tp_Untitled0.jpg") no-repeat fixed;
 			left: 1vw;
 			background-position: 50% 50%;
 			background-size: cover;
-			background-repeat: repeat;
-			background-origin: padding-box;
-			background-clip: border-box;
-			background-attachment: scroll;
 			background-color: black;
+		}
+		.home{
+			margin-top: 10vh;
 		}
 		.trans-white{
 			background-color: rgba(0,0,0,.75);
