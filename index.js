@@ -5,8 +5,6 @@ const express = require("express")
       , port = serverConfig.port || 3000
       , app = express()
       , session = require('express-session')
-			, BreweryDb = require('brewerydb-node')
-			, brewdb = new BreweryDb('e6dd4ca543ecb9e65e170def16b95035')
 			, masterRoutes = require("./masterRoutes.js")
 
 app.use(session({ secret: serverConfig.secret, resave: true, saveUninitialized:true } ) );

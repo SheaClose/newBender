@@ -16,14 +16,11 @@ angular.module("app", ['ui.router', 'uiGmapgoogle-maps'])
     , templateUrl: "./public/views/map.html"
 		, controller: "mapCtrl"
   })
-  .state("browseBeers", {
-      url: "/browseBeers"
-    , templateUrl: "./public/views/browseBeers.html"
-    , controller: "beerListCtrl"
-  })
-  .state("browseBreweries", {
-      url: "/browseBreweries"
-    , templateUrl: "./public/views/browseBreweries.html"
+
+  .state("searchBreweries", {
+      url: "/searchBreweries/:brewery"
+    , templateUrl: "./public/views/brewery.html"
+    , controller: "breweryHomeCtrl"
   })
   .state("browseBeerStyles", {
       url: "/browseBeerStyles"

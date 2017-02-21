@@ -13,9 +13,13 @@ angular.module("app")
 			})
 		}
 	}
+	$scope.navBlurred = () => {
+		$scope.click = false
+
+	}
 	/**/
-	$scope.menuClick = function(bool){
-		(bool !== false) ?  $scope.click = !$scope.click : $scope.click = false
+	$scope.navFocused = function(bool){
+		$scope.click = true
 	}
 	$scope.keyDown = function(e) {
 		var numberBoolean = Number(e)
@@ -30,7 +34,10 @@ angular.module("app")
 			})
 		}
 	}
-	$scope.code = function (e){
+	$scope.searchBreweries = (breweryName) => {
+			$state.go("searchBreweries", {brewery: breweryName})
+			$scope.brewery = ""
 	}
-
+	// $scope.code = function (e){
+	// }
 })
