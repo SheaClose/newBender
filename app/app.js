@@ -1,5 +1,6 @@
 angular.module("app", ['ui.router', 'uiGmapgoogle-maps'])
-.config(function($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider){
+.config(function($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider, $qProvider){
+	$qProvider.errorOnUnhandledRejections(false);
 	uiGmapGoogleMapApiProvider.configure({
       key: 'AIzaSyD48MJ_f0TCqUdP7VzwwEB_PZiz-dInePs	',
       v: '3.20',
