@@ -8,6 +8,9 @@ angular.module("app")
 				return $http.get(`/breweries?breweryName=${breweryName}`).then(response => {
 					return response.data[0]
 				})
+		},
+		getBeersByBrewery(breweryId) {
+			return $http.get(`/beers?breweryId=${breweryId}`)
 		}
 	}
 })
