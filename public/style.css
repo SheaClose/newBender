@@ -112,16 +112,39 @@ a.button-collapse{
 }
 /*end Navbar*/
 /*MapView*/
-@media (min-width:800px) {
+.brewery-list::-webkit-scrollbar {
+	    width: .5em;
+	}
+
+	.brewery-list::-webkit-scrollbar-track {
+	    -webkit-box-shadow: inset 10px 0 6px rgba(0,0,0,0.3);
+	}
+
+	.brewery-list::-webkit-scrollbar-thumb {
+	  background-color: darkgrey;
+	  outline: 1px solid slategrey;
+	}
+	@media (min-width:601px) {
+		.brewery-list{
+			max-height: 90vh;
+			overflow-y: scroll;
+			/*width: 32vw;*/
+		}
 		.angular-google-map-container {
-				height: 99vh;
-				width: 70vw;
+				position: fixed;
+				height: 90vh;
+				/*width: 66vw;*/
 			}
 	}
-	@media (max-width:799px) {
+	@media (max-width:600px) {
 		.angular-google-map-container {
-				height: 60vh;
-				width: 99vw;
+				height: 55vh;
+				/*width: 99vw;*/
+			}
+			.brewery-list{
+				/*overflow-y: scroll;*/
+				/*height: 45vh;*/
+				/*width: 99vw;*/
 			}
 }
 /*end of MapView*/
@@ -137,18 +160,52 @@ a.button-collapse{
 	}
 /*end beer-styles*/
 /*brewery*/
-.trunc_height{
-	min-height: 375px;
+#beers_by_brewery_search{
+	padding-left: 20px;
 }
-.trunc_height:hover{
-	cursor: pointer;
-}
-blockquote{
-	margin-top: 0px;
-	margin-bottom: 20px;
-	padding-left: .5rem;
-	border-left: 5px solid #546E7A;
-}
-.beer_name_height {
-	min-height: 100px;
-}
+#beers_by_brewery_search::-webkit-input-placeholder {
+		color: black;
+	   text-align: center;
+	}
+
+	#beers_by_brewery_search:-moz-placeholder { /* Firefox 18- */
+			color: black;
+	   text-align: center;
+	}
+
+	#beers_by_brewery_search::-moz-placeholder {  /* Firefox 19+ */
+			color: black;
+	   text-align: center;
+	}
+
+	#beers_by_brewery_search:-ms-input-placeholder {
+			color: black;
+	   text-align: center;
+	}
+	textarea#beers_by_brewery_search {
+		color: black;
+		 text-align: center;
+		 width:30vw;
+	  }
+	#beers_by_brewery_search {
+		color: black;
+		border: black solid 1px !important;
+		width:30vw;
+		background-color: white;
+		margin-top: 15px;
+	 }
+	.trunc_height{
+		min-height: 375px;
+	}
+	.trunc_height:hover{
+		cursor: pointer;
+	}
+	blockquote{
+		margin-top: 0px;
+		margin-bottom: 20px;
+		padding-left: .5rem;
+		border-left: 5px solid #546E7A;
+	}
+	.beer_name_height {
+		min-height: 100px;
+	}

@@ -10,6 +10,9 @@ angular.module("app")
 			return $http.post("https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyD48MJ_f0TCqUdP7VzwwEB_PZiz-dInePs").then(function(response){
 	      return response.data.location
 	    })
+		},
+		getBreweries: function(mapObj){
+			return $http.get(`/breweries/${mapObj.longitude}/${mapObj.latitude}`)
 		}
 	}
 })
