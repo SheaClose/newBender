@@ -12,6 +12,8 @@ module.exports = {
 		});
 	},
 	getBreweriesByLocation(req,res){
+		var paramsObj = {lat: req.params.lat, lng: req.params.lng}
+		return res.status(200).json(paramsObj)
 		request(`https://api.brewerydb.com/v2/search/geo/point?lat=${req.params.lat}&lng=${req.params.lng}&radius=50&key=${serverConfig.brewDbKey}`, function(err, breweries, body){
 			if (err) {
 				return res.status(200).json(err)
