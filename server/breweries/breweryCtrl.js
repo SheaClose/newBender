@@ -17,7 +17,7 @@ module.exports = {
 				if (err) {
 					return res.status(200).json(err)
 				}
-				return res.status(200).json(body)
+				return res.status(200).json(err)
 			})
 		}
 
