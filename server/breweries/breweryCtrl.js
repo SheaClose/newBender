@@ -17,7 +17,7 @@ module.exports = {
 				if (err) {
 					return res.status(200).json(err)
 				}
-				return res.send(err, breweries, body)
+				return res.send({err: err, breweries: breweries, body: body, lat: req.query.lat, lng: req.query.lng})
 			})
 		}
 
