@@ -3,7 +3,10 @@ const brewdb = require("../../brewDb.js")
 		, serverConfig = require("../../serverConfig.js")
 
 module.exports = {
-	getBreweriesByName(req, res) {
+	getBreweriesByName(req, res, next) {
+		if (req.params.lat) {
+			next()
+		}
 		brewdb.search.breweries({ q: req.query.breweryName }, (err, brewery) => {
 			if (err) {
 				return res.json(err)
