@@ -4,7 +4,7 @@ const brewdb = require("../../brewDb.js")
 
 module.exports = {
 	getBreweriesByName(req, res, next) {
-			return res.status(200).json({lat:req.params.lat, lng: req.params.lng}})
+			return res.status(200).json({lat:req.params.lat, lng: req.params.lng})
 		brewdb.search.breweries({ q: req.query.breweryName }, (err, brewery) => {
 			if (err) {
 				return res.json(err)
