@@ -12,6 +12,7 @@ module.exports = {
 				return res.status(200).json(brewery)
 			});
 		}
+		return res.status(220).json({bod:req.body, query: req.query})
 		if (req.query.lng){
 			// console.log(req.query.lng)
 			return res.status(200).json({lng:req.query.lng, lat:req.query.lat})
