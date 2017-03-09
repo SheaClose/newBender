@@ -31,7 +31,8 @@ angular.module("app")
 	}
 	uiGmapGoogleMapApi.then(function(maps) {
 		mapFactory.getBreweries($scope.map.center).then(res=>{
-			$scope.localbreweries = res.data
+			var response = JSON.parse(res.data)
+			$scope.localbreweries = response.data
 			$scope.localbreweries.forEach((c,i,a)=>{
 				var breweryObj = {
 					coords: {
