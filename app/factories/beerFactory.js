@@ -1,15 +1,15 @@
 angular.module("app")
 .factory("beerFactory", function($http){
 	return {
-		getBeerStyles() {
+		getBeerStyles: function () {
 			return $http.get("/styles")
 	  },
-		getBreweriesByName(breweryName) {
+		getBreweriesByName: function (breweryName) {
 				return $http.get(`/breweries?breweryName=${breweryName}`).then(response => {
 					return response.data[0]
 				})
 		},
-		getBeersByBrewery(breweryId) {
+		getBeersByBrewery: function (breweryId) {
 			return $http.get(`/beers?breweryId=${breweryId}`)
 		}
 	}

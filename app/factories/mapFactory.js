@@ -12,7 +12,7 @@ angular.module("app")
 	    })
 		},
 		getBreweries: function(mapObj){
-			return $http.get(`/breweries/${mapObj.longitude}/${mapObj.latitude}`)
+			return $http.get(`/breweries?lng=${mapObj.longitude}&lat=${mapObj.latitude}`)
 		}
 	}
 })
