@@ -1,211 +1,248 @@
 /*Home Page*/
-	*{
-			margin: 0;
-			padding: 0;
-		}
-		body{
-			background-color: black;
-		}
-		.links{
-			position: absolute;
-			background-color: transparent;
-		}
-		.home{
-			width: 100vw;
-			height: 90vh;
-			background-image: url("./EOZpjI3oSqKPNnF2S4Tp_Untitled0.jpg");
-			left: 1vw;
-			background-position: 50% 50%;
-			background-size: cover;
-			background-repeat: repeat;
-			background-origin: border-box;
-			background-clip: padding-box;
-			background-attachment: fixed;
-			background-color: black;
-		}
-		.trans-white{
-			background-color: rgba(0,0,0,.75);
-			border-radius: 1vw
-		}
-		@media(max-width:650px){
-			.home-bold{
-				font-size: 1.5em;
-			}
-			.home-less-bold{
-				font-size: 1em;
-			}
-		}
-		@media(min-width:650px){
-			.home-bold{
-				font-size: 4vh;
-			}
-			.home-less-bold{
-				font-size: 2.5vh;
-			}
-		}
-		/*.navbar-fixed{
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+}
+.links {
+  position: absolute;
+  background-color: transparent;
+}
+.home {
+  width: 100vw;
+  height: 90vh;
+  background-image: url("./EOZpjI3oSqKPNnF2S4Tp_Untitled0.jpg");
+  left: 1vw;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: repeat;
+  background-origin: border-box;
+  background-clip: padding-box;
+  background-attachment: fixed;
+  background-color: black;
+}
+.trans-white {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 1vw;
+}
+@media (max-width: 650px) {
+  .home-bold {
+    font-size: 1.5em;
+  }
+  .home-less-bold {
+    font-size: 1em;
+  }
+}
+@media (min-width: 650px) {
+  .home-bold {
+    font-size: 4vh;
+  }
+  .home-less-bold {
+    font-size: 2.5vh;
+  }
+}
+/*.navbar-fixed{
 			position: absolute;
 		}*/
-		.nav-wrapper{
-			background-color: rgb(34,34,34);
-		}
-		.form-control{
-			width: 10vw;
-	}
+.nav-wrapper {
+  background-color: rgb(34, 34, 34);
+}
+.form-control {
+  width: 10vw;
+}
 /*end home page*/
 /*NavBar*/
-a.button-collapse{
-		cursor: pointer;
-		font-size: 3em;
-	}
-	a.navbar-brand{
-		font-size: 60px;
-		font-family: Poller One;
-		color: #EDAC3F;
-	}
-	div input{
-		color: white;
-	}
-	.menu-selections{
-		background-color: rgba(0,0,0,.75);
-		border-radius: 1vw;
-		line-height: 6vh;
-	}
-	.menu-box{
-		color: black;
-		position: fixed;
-		top: 14px;
-		right: 75px;
-		background-color: rgba(255,255,255,.85);
-		border-radius: 10px;
-	}
-	#black-text{
-		color: black;
-	}
-	ul div input.white-text {
-		font-size: 1.25rem;
-		text-align: left;
-		border-bottom: none;
-	}
-	ul div.input-field{
-		margin-left: -13px;
-	}
+a.button-collapse {
+  cursor: pointer;
+  font-size: 3em;
+}
+a.navbar-brand {
+  font-size: 60px;
+  font-family: Poller One;
+  color: #edac3f;
+}
+div input {
+  color: white;
+}
+.menu-selections {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 1vw;
+  line-height: 6vh;
+}
+.menu-box {
+  color: black;
+  position: fixed;
+  top: 14px;
+  right: 75px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+}
+#black-text {
+  color: black;
+}
+ul div input.white-text {
+  font-size: 1.25rem;
+  text-align: left;
+  border-bottom: none;
+}
+ul div.input-field {
+  margin-left: -13px;
+}
 
-	input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea{
-		border: none;
-	}
+input:not([type]),
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="time"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+textarea.materialize-textarea {
+  border: none;
+}
 
-	div div ul div #menu-search::-webkit-input-placeholder {
-	   color: rgba(0,0,0,.75);
-	}
+div div ul div #menu-search::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.75);
+}
 
-	div div ul div #menu-search:-moz-placeholder { /* Firefox 18- */
-	   color: rgba(0,0,0,.75);
-	}
+div div ul div #menu-search:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(0, 0, 0, 0.75);
+}
 
-	div div ul div #menu-search::-moz-placeholder {  /* Firefox 19+ */
-	   color: rgba(0,0,0,.75);
-	}
+div div ul div #menu-search::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.75);
+}
 
-	div div ul div #menu-search:-ms-input-placeholder {
-	   color: rgba(0,0,0,.75);
+div div ul div #menu-search:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.75);
 }
 /*end Navbar*/
 /*MapView*/
 .brewery-list::-webkit-scrollbar {
-	    width: .5em;
-	}
+  width: 0.5em;
+}
 
-	.brewery-list::-webkit-scrollbar-track {
-	    -webkit-box-shadow: inset 10px 0 6px rgba(0,0,0,0.3);
-	}
+.brewery-list::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 10px 0 6px rgba(0, 0, 0, 0.3);
+}
 
-	.brewery-list::-webkit-scrollbar-thumb {
-	  background-color: darkgrey;
-	  outline: 1px solid slategrey;
-	}
-	@media (min-width:601px) {
-		.brewery-list{
-			max-height: 90vh;
-			overflow-y: scroll;
-			/*width: 32vw;*/
-		}
-		.angular-google-map-container {
-				position: fixed;
-				height: 90vh;
-				/*width: 66vw;*/
-			}
-	}
-	@media (max-width:600px) {
-		.angular-google-map-container {
-				height: 55vh;
-				/*width: 99vw;*/
-			}
-			.brewery-list{
-				/*overflow-y: scroll;*/
-				/*height: 45vh;*/
-				/*width: 99vw;*/
-			}
+.brewery-list::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+@media (min-width: 601px) {
+  .brewery-list {
+    max-height: 90vh;
+    overflow-y: scroll;
+    /*width: 32vw;*/
+  }
+  .angular-google-map-container {
+    position: fixed;
+    height: 90vh;
+    /*width: 66vw;*/
+  }
+}
+@media (max-width: 600px) {
+  .angular-google-map-container {
+    height: 55vh;
+    /*width: 99vw;*/
+  }
+  .brewery-list {
+    /*overflow-y: scroll;*/
+    /*height: 45vh;*/
+    /*width: 99vw;*/
+  }
 }
 /*end of MapView*/
 /*beer-styles*/
-.card-cont{
-		cursor: pointer;
-		height: 15vh;
-	}
-	.beer-styles-icons{
-		color: white;
-		font-size: 3em;
-		cursor: pointer;
-	}
-/*end beer-styles*/
-/*brewery*/
-#beers_by_brewery_search{
-	padding-left: 20px;
+.card-cont {
+  cursor: pointer;
+  height: 15vh;
+}
+.beer-styles-icons {
+  color: white;
+  font-size: 3em;
+  cursor: pointer;
+}
+#beers_by_brewery_search {
+  padding-left: 20px;
 }
 #beers_by_brewery_search::-webkit-input-placeholder {
-		color: black;
-	   text-align: center;
-	}
+  color: black;
+  text-align: center;
+}
 
-	#beers_by_brewery_search:-moz-placeholder { /* Firefox 18- */
-			color: black;
-	   text-align: center;
-	}
+#beers_by_brewery_search:-moz-placeholder {
+  color: black;
+  text-align: center;
+}
 
-	#beers_by_brewery_search::-moz-placeholder {  /* Firefox 19+ */
-			color: black;
-	   text-align: center;
-	}
+#beers_by_brewery_search::-moz-placeholder {
+  color: black;
+  text-align: center;
+}
 
-	#beers_by_brewery_search:-ms-input-placeholder {
-			color: black;
-	   text-align: center;
-	}
-	textarea#beers_by_brewery_search {
-		color: black;
-		 text-align: center;
-		 width:30vw;
-	  }
-	#beers_by_brewery_search {
-		color: black;
-		border: black solid 1px !important;
-		width:30vw;
-		background-color: white;
-		margin-top: 15px;
-	 }
-	.trunc_height{
-		min-height: 375px;
-	}
-	.trunc_height:hover{
-		cursor: pointer;
-	}
-	blockquote{
-		margin-top: 0px;
-		margin-bottom: 20px;
-		padding-left: .5rem;
-		border-left: 5px solid #546E7A;
-	}
-	.beer_name_height {
-		min-height: 100px;
-	}
+#beers_by_brewery_search:-ms-input-placeholder {
+  color: black;
+  text-align: center;
+}
+textarea#beers_by_brewery_search {
+  color: black;
+  text-align: center;
+  width: 30vw;
+}
+#beers_by_brewery_search {
+  color: black;
+  border: black solid 1px !important;
+  width: 30vw;
+  background-color: white;
+  margin-top: 15px;
+}
+
+.beer_name_height {
+  min-height: 100px;
+}
+.flip-container {
+  perspective: 1000px;
+  background-color: #546e7a;
+  min-height: 400px;
+}
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+  font-size: 1.3vh;
+}
