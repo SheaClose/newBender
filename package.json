@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "angular-google-maps": "^2.4.1",
+    "axios": "^0.18.0",
     "body-parser": "^1.16.1",
     "bootstrap": "^3.3.7",
     "brewerydb-node": "0.0.1",
