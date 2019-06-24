@@ -17054,7 +17054,7 @@
   /*--------------------------------------------------------------------------*/
 
   // Export lodash.
-  var _ = runInContext();
+  window._ = runInContext();
 
   // Some AMD build optimizers, like r.js, check for condition patterns like:
   if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {

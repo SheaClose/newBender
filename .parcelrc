@@ -1,0 +1,8 @@
+{
+  "url-loader": {
+    "exts": [
+      "html"
+    ],
+    "limit": 66666
+  }
+}
