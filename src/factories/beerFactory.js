@@ -1,17 +1,19 @@
 function beerFactory($http) {
+  let BASEURL =
+    process.env.NODE_ENV === "production" ? "" : "http://localhost:3000";
   return {
     getBeerStyles: function() {
-      return $http.get("/styles");
+      return $http.get(`${BASEURL}/bender/styles`);
     },
     getBreweriesByName: function(breweryName) {
       return $http
-        .get(`/breweries?breweryName=${breweryName}`)
+        .get(`${BASEURL}/bender/breweries?breweryName=${breweryName}`)
         .then(response => {
           return response.data[0];
         });
     },
     getBeersByBrewery: function(breweryId) {
-      return $http.get(`/beers?breweryId=${breweryId}`);
+      return $http.get(`${BASEURL}/bender/beers?breweryId=${breweryId}`);
     }
   };
 }

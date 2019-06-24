@@ -1,9 +1,5 @@
 function navBarCtrl($scope, $state, mapFactory, beerFactory) {
-  /*boolean value to determine if the hamburger menu is selected*/
   $scope.click = false;
-  /*this function is run when "browse by area"to determine if the
-	browser is on the mapview. if it is, it reassigns the $scope.map
-	to the current geoLocation, regardless of state params*/
   $scope.whereAmI = function() {
     if ($state.current.name === "mapView") {
       mapFactory.searchByLocation().then(response => {
@@ -15,7 +11,6 @@ function navBarCtrl($scope, $state, mapFactory, beerFactory) {
   $scope.navBlurred = () => {
     $scope.click = false;
   };
-  /**/
   $scope.navFocused = function(bool) {
     $scope.click = true;
   };

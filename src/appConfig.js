@@ -1,9 +1,8 @@
-// import homeTmpl from "./views/home.html";
-// console.log("homeTmpl: ", homeTmpl);
-// import breweryTmpl from "./views/brewery.html";
-// import browseBeerStylesTmpl from "./views/browseBeerStyles.html";
-// import mapTmpl from "./views/map.html";
-// import searchBreweriesTmpl from "./views/searchBreweries.html";
+import homeTmpl from "./views/home.html.as-url";
+import breweryTmpl from "./views/brewery.html.as-url";
+import browseBeerStylesTmpl from "./views/browseBeerStyles.html.as-url";
+import mapTmpl from "./views/map.html.as-url";
+import searchBreweriesTmpl from "./views/searchBreweries.html.as-url";
 
 function config(
   $stateProvider,
@@ -18,32 +17,32 @@ function config(
     libraries: "weather,geometry,visualization"
   });
   $urlRouterProvider.otherwise("/");
-  $stateProvider.state("home", {
-    url: "/",
-    // template: homeTmpl,
-    template: `<nav-bar></nav-bar>`
-  });
-  // .state("mapView", {
-  //   url: "/map/:lat/:lng",
-  //   template: mapTmpl,
-  //   controller: "mapCtrl"
-  // })
+  $stateProvider
+    .state("home", {
+      url: "/",
+      templateUrl: homeTmpl
+    })
+    .state("mapView", {
+      url: "/map/:lat/:lng",
+      templateUrl: mapTmpl,
+      controller: "mapCtrl"
+    })
 
-  // .state("searchBreweries", {
-  //   url: "/searchBreweries/:brewery",
-  //   template: searchBreweriesTmpl,
-  //   controller: "breweryHomeCtrl"
-  // })
-  // .state("browseBeerStyles", {
-  //   url: "/browseBeerStyles",
-  //   template: browseBeerStylesTmpl,
-  //   controller: "beerListCtrl"
-  // })
-  // .state("brewery", {
-  //   url: "/brewery/:bId",
-  //   template: breweryTmpl,
-  //   controller: "breweryHomeCtrl"
-  // });
+    .state("searchBreweries", {
+      url: "/searchBreweries/:brewery",
+      templateUrl: searchBreweriesTmpl,
+      controller: "breweryHomeCtrl"
+    })
+    .state("browseBeerStyles", {
+      url: "/browseBeerStyles",
+      templateUrl: browseBeerStylesTmpl,
+      controller: "beerListCtrl"
+    })
+    .state("brewery", {
+      url: "/brewery/:bId",
+      templateUrl: breweryTmpl,
+      controller: "breweryHomeCtrl"
+    });
 }
 
 export default [
