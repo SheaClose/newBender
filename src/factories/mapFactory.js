@@ -1,3 +1,7 @@
+const BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://api.sheaclose.com"
+    : "http://localhost:3000";
 function mapFactory($http) {
   return {
     searchByZipcode: function(zipCodeInput) {
@@ -22,7 +26,9 @@ function mapFactory($http) {
     },
     getBreweries: function(mapObj) {
       return $http.get(
-        `/breweries?lng=${mapObj.longitude}&lat=${mapObj.latitude}`
+        `${BASE_URL}/bender/breweries?lng=${mapObj.longitude}&lat=${
+          mapObj.latitude
+        }`
       );
     }
   };

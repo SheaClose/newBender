@@ -1,6 +1,8 @@
 function beerFactory($http) {
-  let BASEURL =
-    process.env.NODE_ENV === "production" ? "" : "http://localhost:3000";
+  const BASE_URL =
+    process.env.NODE_ENV === "production"
+      ? "https://api.sheaclose.com"
+      : "http://localhost:3000";
   return {
     getBeerStyles: function() {
       return $http.get(`${BASEURL}/bender/styles`);
