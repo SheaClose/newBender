@@ -12,7 +12,7 @@ function config(
 ) {
   $qProvider.errorOnUnhandledRejections(false);
   uiGmapGoogleMapApiProvider.configure({
-    key: "AIzaSyD48MJ_f0TCqUdP7VzwwEB_PZiz-dInePs	",
+    key: "AIzaSyA_P3aNHcSScP9gucZMw1JHvViv5tdw6DE",
     v: "3.20",
     libraries: "weather,geometry,visualization"
   });
