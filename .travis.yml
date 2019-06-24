@@ -11,5 +11,6 @@ install:
 
 script:
   - npm run build
+  - aws s3 rm s3://bender.sheaclose.com --recursive
   - aws s3 cp ./dist/ s3://bender.sheaclose.com/ --recursive
   - aws cloudfront create-invalidation --distribution-id E2ENEHN0OB8CZ5 --paths /*
