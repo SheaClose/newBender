@@ -2,3 +2,4 @@ serverConfig.js
 node_modules
 dist
 .cache
+nginx.conf
