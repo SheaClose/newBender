@@ -1,6 +1,6 @@
 <nav-bar></nav-bar>
 <div class="container">
-	<div class="white-text">
+	<div class="white-text" ng-if="breweryByName">
 		<ul class="center">
 			<img class="responsive-img" ng-src="{{breweryByName.images.large}}" alt="">
 			<li>
@@ -65,5 +65,8 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div ng-if="!breweryByName" class="no-brewery">
+		Sorry, no brewery by that name was found.
 	</div>
 </div>

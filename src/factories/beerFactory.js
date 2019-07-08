@@ -5,17 +5,15 @@ function beerFactory($http) {
       : "http://localhost:3000";
   return {
     getBeerStyles: function() {
-      return $http.get(`${BASEURL}/bender/styles`);
+      return $http.get(`${BASE_URL}/bender/styles`);
     },
     getBreweriesByName: function(breweryName) {
       return $http
-        .get(`${BASEURL}/bender/breweries?breweryName=${breweryName}`)
-        .then(response => {
-          return response.data[0];
-        });
+        .get(`${BASE_URL}/bender/breweries?breweryName=${breweryName}`)
+        .then(({ data }) => (data ? data[0] : null));
     },
     getBeersByBrewery: function(breweryId) {
-      return $http.get(`${BASEURL}/bender/beers?breweryId=${breweryId}`);
+      return $http.get(`${BASE_URL}/bender/beers?breweryId=${breweryId}`);
     }
   };
 }

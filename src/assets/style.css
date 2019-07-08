@@ -246,3 +246,12 @@ textarea#beers_by_brewery_search {
   transform: rotateY(180deg);
   font-size: 1.3vh;
 }
+.no-brewery {
+  text-align: center;
+  color: white;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}

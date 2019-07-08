@@ -2,7 +2,6 @@ import homeTmpl from "./views/home.html.as-url";
 import breweryTmpl from "./views/brewery.html.as-url";
 import browseBeerStylesTmpl from "./views/browseBeerStyles.html.as-url";
 import mapTmpl from "./views/map.html.as-url";
-import searchBreweriesTmpl from "./views/searchBreweries.html.as-url";
 
 function config(
   $stateProvider,
@@ -30,7 +29,7 @@ function config(
 
     .state("searchBreweries", {
       url: "/searchBreweries/:brewery",
-      templateUrl: searchBreweriesTmpl,
+      templateUrl: breweryTmpl,
       controller: "breweryHomeCtrl"
     })
     .state("browseBeerStyles", {
